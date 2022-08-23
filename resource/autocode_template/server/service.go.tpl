@@ -1,10 +1,10 @@
 package {{.Package}}
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/{{.Package}}"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
-    {{.Package}}Req "github.com/flipped-aurora/gin-vue-admin/server/model/{{.Package}}/request"
+	"github.com/opisnoeasy/course-service/global"
+	"github.com/opisnoeasy/course-service/model/{{.Package}}"
+	"github.com/opisnoeasy/course-service/model/common/request"
+    {{.Package}}Req "github.com/opisnoeasy/course-service/model/{{.Package}}/request"
 )
 
 type {{.StructName}}Service struct {

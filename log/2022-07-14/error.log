@@ -1,2 +1,0 @@
-[github.com/flipped-aurora/gin-vue-admin/server]2022/07/14 - 16:12:09.319	[31merror[0m	D:/code/gin-vue-admin/server/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "密码错误"}
-[github.com/flipped-aurora/gin-vue-admin/server]2022/07/14 - 18:06:25.276	[31merror[0m	D:/code/gin-vue-admin/server/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "密码错误"}

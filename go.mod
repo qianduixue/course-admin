@@ -1,4 +1,4 @@
-module github.com/flipped-aurora/gin-vue-admin/server
+module github.com/opisnoeasy/course-service
 
 go 1.16
 

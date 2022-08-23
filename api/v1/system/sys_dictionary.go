@@ -1,12 +1,12 @@
 package system
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/common/response"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/system/request"
-	"github.com/flipped-aurora/gin-vue-admin/server/utils"
 	"github.com/gin-gonic/gin"
+	"github.com/opisnoeasy/course-service/global"
+	"github.com/opisnoeasy/course-service/model/common/response"
+	"github.com/opisnoeasy/course-service/model/system"
+	"github.com/opisnoeasy/course-service/model/system/request"
+	"github.com/opisnoeasy/course-service/utils"
 	"go.uber.org/zap"
 )
 

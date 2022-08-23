@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/core"
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/initialize"
+	"github.com/opisnoeasy/course-service/core"
+	"github.com/opisnoeasy/course-service/global"
+	"github.com/opisnoeasy/course-service/initialize"
 	"go.uber.org/zap"
 )
 

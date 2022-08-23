@@ -1,8 +1,8 @@
 package {{.Package}}
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/api/v1"
-	"github.com/flipped-aurora/gin-vue-admin/server/middleware"
+	"github.com/opisnoeasy/course-service/api/v1"
+	"github.com/opisnoeasy/course-service/middleware"
 	"github.com/gin-gonic/gin"
 )
 

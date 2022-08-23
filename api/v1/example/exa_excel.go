@@ -1,10 +1,10 @@
 package example
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/common/response"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/example"
 	"github.com/gin-gonic/gin"
+	"github.com/opisnoeasy/course-service/global"
+	"github.com/opisnoeasy/course-service/model/common/response"
+	"github.com/opisnoeasy/course-service/model/example"
 	"go.uber.org/zap"
 	"os"
 	"strings"

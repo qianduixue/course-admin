@@ -9,8 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/utils"
+	"github.com/opisnoeasy/course-service/global"
 	"go.uber.org/zap"
 )
 
@@ -29,10 +28,10 @@ func (*Local) UploadFile(file *multipart.FileHeader) (string, string, error) {
 	// 读取文件后缀
 	ext := path.Ext(file.Filename)
 	// 读取文件名并加密
-	name := strings.TrimSuffix(file.Filename, ext)
-	name = utils.MD5V([]byte(name))
+	//name := strings.TrimSuffix(file.Filename, ext)
+	//name = utils.MD5V([]byte(name))
 	// 拼接新文件名
-	filename := name + "_" + time.Now().Format("20060102150405") + ext
+	filename := time.Now().Format("20060102150405") + ext
 	// 尝试创建此路径
 	mkdirErr := os.MkdirAll(global.GVA_CONFIG.Local.StorePath, os.ModePerm)
 	if mkdirErr != nil {

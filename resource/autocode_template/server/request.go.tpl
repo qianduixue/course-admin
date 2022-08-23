@@ -1,8 +1,8 @@
 package request
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/model/{{.Package}}"
-	"github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
+	"github.com/opisnoeasy/course-service/model/{{.Package}}"
+	"github.com/opisnoeasy/course-service/model/common/request"
 )
 
 type {{.StructName}}Search struct{

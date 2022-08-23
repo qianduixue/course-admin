@@ -2,7 +2,7 @@
 package {{.Package}}
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/opisnoeasy/course-service/global"
 	{{ if .HasTimer }}"time"{{ end }}
 )
 

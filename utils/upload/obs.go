@@ -1,8 +1,8 @@
 package upload
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/huaweicloud/huaweicloud-sdk-go-obs/obs"
+	"github.com/opisnoeasy/course-service/global"
 	"github.com/pkg/errors"
 	"mime/multipart"
 )

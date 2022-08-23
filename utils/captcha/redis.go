@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/mojocn/base64Captcha"
+	"github.com/opisnoeasy/course-service/global"
 	"go.uber.org/zap"
 )
 

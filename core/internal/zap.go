@@ -2,7 +2,7 @@ package internal
 
 import (
 	"fmt"
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/opisnoeasy/course-service/global"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"time"

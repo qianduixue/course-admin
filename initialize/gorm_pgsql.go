@@ -1,9 +1,9 @@
 package initialize
 
 import (
-	"github.com/flipped-aurora/gin-vue-admin/server/config"
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/initialize/internal"
+	"github.com/opisnoeasy/course-service/config"
+	"github.com/opisnoeasy/course-service/global"
+	"github.com/opisnoeasy/course-service/initialize/internal"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

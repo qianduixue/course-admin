@@ -1,6 +1,6 @@
-[github.com/flipped-aurora/gin-vue-admin/server]2022/08/13 - 15:18:41.996	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:61	register table success
-[github.com/flipped-aurora/gin-vue-admin/server]2022/08/13 - 15:18:42.001	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
-[github.com/flipped-aurora/gin-vue-admin/server]2022/08/13 - 15:18:42.003	[34minfo[0m	D:/code/course-admin/initialize/router.go:37	register swagger handler
-[github.com/flipped-aurora/gin-vue-admin/server]2022/08/13 - 15:18:42.010	[34minfo[0m	D:/code/course-admin/initialize/router.go:79	router register success
-[github.com/flipped-aurora/gin-vue-admin/server]2022/08/13 - 15:18:42.013	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
-[github.com/flipped-aurora/gin-vue-admin/server]2022/08/13 - 15:21:30.790	[34minfo[0m	D:/code/course-admin/api/v1/system/sys_initdb.go:57	数据库无需初始化
+[github.com/opisnoeasy/course-service]2022/08/13 - 15:18:41.996	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:61	register table success
+[github.com/opisnoeasy/course-service]2022/08/13 - 15:18:42.001	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/13 - 15:18:42.003	[34minfo[0m	D:/code/course-admin/initialize/router.go:37	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/13 - 15:18:42.010	[34minfo[0m	D:/code/course-admin/initialize/router.go:79	router register success
+[github.com/opisnoeasy/course-service]2022/08/13 - 15:18:42.013	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
+[github.com/opisnoeasy/course-service]2022/08/13 - 15:21:30.790	[34minfo[0m	D:/code/course-admin/api/v1/system/sys_initdb.go:57	数据库无需初始化

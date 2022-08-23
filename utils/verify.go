@@ -16,4 +16,10 @@ var (
 	OldAuthorityVerify     = Rules{"OldAuthorityId": {NotEmpty()}}
 	ChangePasswordVerify   = Rules{"Password": {NotEmpty()}, "NewPassword": {NotEmpty()}}
 	SetUserAuthorityVerify = Rules{"AuthorityId": {NotEmpty()}}
+	CourseInfoVerify       = Rules{"Abstract": {NotEmpty()}, "Desc": {NotEmpty()}, "Title": {NotEmpty()}}
+	UserLevelPriceVerify   = Rules{"Name": {NotEmpty()}, "Grade": {NotEmpty()}, "Price": {NotEmpty()}, "Type": {NotEmpty()}}
+	MemberInterestsVerify  = Rules{"Title": {NotEmpty()}, "Linked": {NotEmpty()}}
+	CourseSectionVerify    = Rules{"CourseId": {NotEmpty()}, "CoverImage": {NotEmpty()}, "Lessons": {NotEmpty()}, "LongTime": {NotEmpty()}, "Title": {NotEmpty()}, "VideoUrl": {NotEmpty()}}
+	ContactUsVerify        = Rules{"Account": {NotEmpty()}, "AccountName": {NotEmpty()}, "Icon": {NotEmpty()}}
+	PlatformRegisterVerify = Rules{"BackgroundImage": {NotEmpty()}, "Linked": {NotEmpty()}}
 )

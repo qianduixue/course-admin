@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/opisnoeasy/course-service/global"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )

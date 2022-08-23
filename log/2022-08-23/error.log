@@ -1,0 +1,20 @@
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:16:30.416	[31merror[0m	D:/code/course-admin/middleware/operation.go:122	create operation record error:	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:17:37.289	[31merror[0m	D:/code/course-admin/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:19:09.481	[31merror[0m	D:/code/course-admin/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:19:18.602	[31merror[0m	D:/code/course-admin/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:19:29.768	[31merror[0m	D:/code/course-admin/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:20:36.496	[31merror[0m	D:/code/course-admin/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:20:52.226	[31merror[0m	D:/code/course-admin/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:21:23.669	[31merror[0m	D:/code/course-admin/api/v1/system/sys_user.go:35	登陆失败! 用户名不存在或者密码错误!	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:23:03.618	[31merror[0m	D:/code/course-admin/middleware/operation.go:122	create operation record error:	{"error": "invalid transaction"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:43:20.914	[31merror[0m	D:/code/course-admin/api/v1/course/course_section.go:60	删除失败!	{"error": "Error 1054: Unknown column 'course_info.course_id' in 'field list'"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 10:43:25.122	[31merror[0m	D:/code/course-admin/api/v1/course/course_section.go:60	删除失败!	{"error": "Error 1054: Unknown column 'course_info.course_id' in 'field list'"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 11:27:26.900	[31merror[0m	D:/code/course-admin/api/v1/web/contact_us.go:125	查询失败!	{"error": "record not found"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 11:27:30.200	[31merror[0m	D:/code/course-admin/api/v1/web/contact_us.go:125	查询失败!	{"error": "record not found"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 11:29:59.563	[31merror[0m	D:/code/course-admin/api/v1/web/contact_us.go:125	查询失败!	{"error": "record not found"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 11:30:45.744	[31merror[0m	D:/code/course-admin/api/v1/web/contact_us.go:125	查询失败!	{"error": "record not found"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 18:23:08.314	[31merror[0m	D:/code/course-admin/api/v1/common/common.go:20	接收文件失败!	{"error": "request Content-Type isn't multipart/form-data"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 18:24:25.102	[31merror[0m	D:/code/course-admin/api/v1/common/common.go:20	接收文件失败!	{"error": "request Content-Type isn't multipart/form-data"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 18:26:37.073	[31merror[0m	D:/code/course-admin/api/v1/common/common.go:20	接收文件失败!	{"error": "request Content-Type isn't multipart/form-data"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 18:27:14.177	[31merror[0m	D:/code/course-admin/middleware/operation.go:122	create operation record error:	{"error": "Error 1366: Incorrect string value: '\\xE5\\x00\\x00WEB...' for column 'body' at row 1"}
+[github.com/opisnoeasy/course-service]2022/08/23 - 18:30:28.499	[31merror[0m	D:/code/course-admin/middleware/operation.go:122	create operation record error:	{"error": "Error 1366: Incorrect string value: '\\xE5\\x00\\x00WEB...' for column 'body' at row 1"}

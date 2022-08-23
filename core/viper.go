@@ -3,17 +3,17 @@ package core
 import (
 	"flag"
 	"fmt"
-	"github.com/flipped-aurora/gin-vue-admin/server/core/internal"
 	"github.com/gin-gonic/gin"
+	"github.com/opisnoeasy/course-service/core/internal"
 	"os"
 	"path/filepath"
 	"time"
 
 	"github.com/songzhibin97/gkit/cache/local_cache"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	_ "github.com/flipped-aurora/gin-vue-admin/server/packfile"
 	"github.com/fsnotify/fsnotify"
+	"github.com/opisnoeasy/course-service/global"
+	_ "github.com/opisnoeasy/course-service/packfile"
 	"github.com/spf13/viper"
 )
 

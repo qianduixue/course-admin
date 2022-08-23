@@ -2,9 +2,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/flipped-aurora/gin-vue-admin/server/core/internal"
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/utils"
+	"github.com/opisnoeasy/course-service/core/internal"
+	"github.com/opisnoeasy/course-service/global"
+	"github.com/opisnoeasy/course-service/utils"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"os"

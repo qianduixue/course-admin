@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/initialize"
-	"github.com/flipped-aurora/gin-vue-admin/server/service/system"
+	"github.com/opisnoeasy/course-service/global"
+	"github.com/opisnoeasy/course-service/initialize"
+	"github.com/opisnoeasy/course-service/service/system"
 	"go.uber.org/zap"
 )
 
