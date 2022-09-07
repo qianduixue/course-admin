@@ -31,6 +31,16 @@ func (commonApi *CommonApi) Upload(c *gin.Context) {
 	}
 }
 
+func (commonApi *CommonApi) UploadPart(c *gin.Context) {
+	key := c.Request.PostFormValue("key")
+	uploadId := c.Request.PostFormValue("uploadId")
+	partNumber := c.Request.PostFormValue("partNumber")
+	if key == "" || uploadId == "" || partNumber == "" {
+		response.FailWithMessage("参数不能为空", c)
+		return
+	}
+}
+
 //CreateMultipartUpload 启动分段上传
 func (commonApi *CommonApi) CreateMultipartUpload(c *gin.Context) {
 	filePath := c.Request.PostFormValue("file")

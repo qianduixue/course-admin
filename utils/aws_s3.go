@@ -100,6 +100,27 @@ func UploadPart(svc *s3.S3, resp *s3.CreateMultipartUploadOutput, partNumber int
 	return nil, nil
 }
 
+//UploadPart1 分段上传
+func UploadPart1(resp *s3.CreateMultipartUploadOutput, partNumber int, fileBody []byte) (*s3.CompletedPart, error) {
+	svc := s3.New(newSession())
+	input := &s3.UploadPartInput{
+		Body:          bytes.NewReader(fileBody), // 文件流
+		Bucket:        aws.String(global.GVA_CONFIG.AwsS3.Bucket),
+		Key:           resp.Key,
+		PartNumber:    aws.Int64(int64(partNumber)),
+		UploadId:      resp.UploadId,
+		ContentLength: aws.Int64(int64(len(fileBody))),
+	}
+	result, err := svc.UploadPart(input)
+	if err != nil {
+		return nil, err
+	}
+	return &s3.CompletedPart{
+		ETag:       result.ETag,
+		PartNumber: aws.Int64(int64(partNumber)),
+	}, nil
+}
+
 //CompleteMultipartUpload 完成分段上传
 func CompleteMultipartUpload(svc *s3.S3, resp *s3.CreateMultipartUploadOutput, parts []*s3.CompletedPart) (*s3.CompleteMultipartUploadOutput, error) {
 	input := &s3.CompleteMultipartUploadInput{
