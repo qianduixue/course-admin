@@ -1,0 +1,35 @@
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:18:45.693	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:72	register table success
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:18:45.695	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:18:45.696	[34minfo[0m	D:/code/course-admin/initialize/router.go:40	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:18:45.706	[34minfo[0m	D:/code/course-admin/initialize/router.go:92	router register success
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:18:45.720	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:31:50.866	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:72	register table success
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:31:50.869	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:31:50.869	[34minfo[0m	D:/code/course-admin/initialize/router.go:40	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:31:50.879	[34minfo[0m	D:/code/course-admin/initialize/router.go:92	router register success
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:31:50.888	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:37:19.509	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:72	register table success
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:37:19.511	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:37:19.511	[34minfo[0m	D:/code/course-admin/initialize/router.go:40	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:37:19.521	[34minfo[0m	D:/code/course-admin/initialize/router.go:92	router register success
+[github.com/opisnoeasy/course-service]2022/08/26 - 15:37:19.523	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:13:57.041	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:72	register table success
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:13:57.044	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:13:57.045	[34minfo[0m	D:/code/course-admin/initialize/router.go:40	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:13:57.055	[34minfo[0m	D:/code/course-admin/initialize/router.go:92	router register success
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:13:57.057	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:25:14.146	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:72	register table success
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:25:14.148	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:25:14.149	[34minfo[0m	D:/code/course-admin/initialize/router.go:40	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:25:14.160	[34minfo[0m	D:/code/course-admin/initialize/router.go:92	router register success
+[github.com/opisnoeasy/course-service]2022/08/26 - 16:25:14.167	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 17:27:56.212	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:72	register table success
+[github.com/opisnoeasy/course-service]2022/08/26 - 17:27:56.214	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 17:27:56.215	[34minfo[0m	D:/code/course-admin/initialize/router.go:40	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/26 - 17:27:56.223	[34minfo[0m	D:/code/course-admin/initialize/router.go:92	router register success
+[github.com/opisnoeasy/course-service]2022/08/26 - 17:27:56.225	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 18:49:19.757	[34minfo[0m	D:/code/course-admin/initialize/gorm.go:72	register table success
+[github.com/opisnoeasy/course-service]2022/08/26 - 18:49:19.759	[34minfo[0m	D:/code/course-admin/initialize/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[github.com/opisnoeasy/course-service]2022/08/26 - 18:49:19.760	[34minfo[0m	D:/code/course-admin/initialize/router.go:40	register swagger handler
+[github.com/opisnoeasy/course-service]2022/08/26 - 18:49:19.769	[34minfo[0m	D:/code/course-admin/initialize/router.go:92	router register success
+[github.com/opisnoeasy/course-service]2022/08/26 - 18:49:19.783	[34minfo[0m	D:/code/course-admin/core/server.go:36	server run success on 	{"address": ":8888"}

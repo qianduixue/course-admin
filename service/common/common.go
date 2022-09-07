@@ -19,3 +19,14 @@ func (commonService *CommonService) UploadFileToLocal(file *multipart.FileHeader
 	}
 	return uploadFile, err
 }
+
+//UploadFileToAws 上传文件到AWS
+func (commonservice *CommonService) UploadFileToAws(file *multipart.FileHeader) (path string, err error) {
+	oss := upload.NewOss()
+	uploadFile, _, err := oss.UploadFile(file)
+	if err != nil {
+		global.GVA_LOG.Fatal("上传文件失败")
+		panic(err)
+	}
+	return uploadFile, err
+}

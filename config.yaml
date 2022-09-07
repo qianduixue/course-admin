@@ -21,15 +21,15 @@ autocode:
   web-form: /view
   web-table: /view
 aws-s3:
-  bucket: xxxxx-10005608
-  region: ap-shanghai
+  bucket: we-course-source71e471f1-6l77874rzuak
+  region: us-east-1
   endpoint: ""
   s3-force-path-style: false
   disable-ssl: false
-  secret-id: xxxxxxxx
-  secret-key: xxxxxxxx
-  base-url: https://gin.vue.admin
-  path-prefix: github.com/opisnoeasy/course-service
+  secret-id: "AKIA3WNSABCTKXJMMYM7"
+  secret-key: "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"
+  base-url: https://d3nsf2ty2rl01w.cloudfront.net
+  path-prefix: "assets01"
 captcha:
   key-long: 6
   img-width: 240
@@ -110,12 +110,12 @@ pgsql:
   log-mode: ""
   log-zap: false
 qiniu:
-  zone: ZoneHuaDong
-  bucket: ""
-  img-path: ""
+  zone: ZoneXinjiapo
+  bucket: "my-course"
+  img-path: "output"
   use-https: false
-  access-key: ""
-  secret-key: ""
+  access-key: "TT0DVA44wNEsF09brJTfixMgyLIYVFx0GVfWto6j"
+  secret-key: "IaETkXPkrwDpupXPOo1M1unW6NqMAtMJnHzTqSfC"
   use-cdn-domains: false
 redis:
   db: 0
@@ -125,7 +125,7 @@ system:
   env: public
   addr: 8888
   db-type: mysql
-  oss-type: local
+  oss-type: aws-s3
   use-multipoint: false
   use-redis: true
   iplimit-count: 15000

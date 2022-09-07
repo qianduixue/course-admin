@@ -1,0 +1,1 @@
+[github.com/opisnoeasy/course-service]2022/08/25 - 11:57:09.219	[31merror[0m	D:/code/course-admin/middleware/operation.go:122	create operation record error:	{"error": "Error 1366: Incorrect string value: '\\x90\\xE8moov...' for column 'body' at row 1"}

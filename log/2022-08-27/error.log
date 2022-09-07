@@ -1,0 +1,1 @@
+[github.com/opisnoeasy/course-service]2022/08/27 - 17:32:42.178	[31merror[0m	D:/code/course-admin/utils/upload/aws_s3.go:57	function os.Create() Filed	{"err": "open video/.mp4: The system cannot find the path specified."}
