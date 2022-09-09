@@ -24,20 +24,23 @@ import (
 )
 
 const (
-	maxRetries  = 3
-	maxPartSize = int64(5 * 1024 * 1024)
+	maxRetries         = 3
+	awsAccessKeyID     = "AKIA3WNSABCTKXJMMYM7"
+	awsSecretAccessKey = "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"
+	awsBucketRegion    = "us-east-1"
+	awsBucketName      = "we-course-source71e471f1-6l77874rzuak"
+	awsPathPrefix      = "assets01"
 )
 
 // newSession Create S3 session
 func newSession() *session.Session {
 	s, _ := session.NewSession(&aws.Config{
-		Region:           aws.String(global.GVA_CONFIG.AwsS3.Region),
-		Endpoint:         aws.String(global.GVA_CONFIG.AwsS3.Endpoint),
-		S3ForcePathStyle: aws.Bool(global.GVA_CONFIG.AwsS3.S3ForcePathStyle),
-		DisableSSL:       aws.Bool(global.GVA_CONFIG.AwsS3.DisableSSL),
+		Region:           aws.String(awsBucketRegion),
+		S3ForcePathStyle: aws.Bool(false),
+		DisableSSL:       aws.Bool(false),
 		Credentials: credentials.NewStaticCredentials(
-			global.GVA_CONFIG.AwsS3.SecretID,
-			global.GVA_CONFIG.AwsS3.SecretKey,
+			awsAccessKeyID,
+			awsSecretAccessKey,
 			"",
 		),
 	})
@@ -46,7 +49,7 @@ func newSession() *session.Session {
 
 func CreateMultipartUpload(fileName string, svc *s3.S3) (*s3.CreateMultipartUploadOutput, error) {
 	input := &s3.CreateMultipartUploadInput{
-		Bucket: aws.String(global.GVA_CONFIG.AwsS3.Bucket),
+		Bucket: aws.String(awsBucketName),
 		Key:    aws.String(fileName),
 	}
 	result, err := svc.CreateMultipartUpload(input)
@@ -61,7 +64,7 @@ func GetFileName(filePath string) string {
 	fileKey := fmt.Sprintf("%d%d", time.Now().Unix(), GetRangeNum(4))
 	suffix := path.Ext(filePath)
 	var build strings.Builder
-	build.WriteString(global.GVA_CONFIG.AwsS3.PathPrefix)
+	build.WriteString(awsPathPrefix)
 	build.WriteString("/")
 	build.WriteString(fileKey)
 	build.WriteString(suffix)
@@ -74,7 +77,7 @@ func UploadPart(svc *s3.S3, resp *s3.CreateMultipartUploadOutput, partNumber int
 	tryNum := 1
 	input := &s3.UploadPartInput{
 		Body:          bytes.NewReader(fileBody), // 文件流
-		Bucket:        aws.String(global.GVA_CONFIG.AwsS3.Bucket),
+		Bucket:        aws.String(awsBucketName),
 		Key:           resp.Key,
 		PartNumber:    aws.Int64(int64(partNumber)),
 		UploadId:      resp.UploadId,
@@ -100,15 +103,26 @@ func UploadPart(svc *s3.S3, resp *s3.CreateMultipartUploadOutput, partNumber int
 	return nil, nil
 }
 
-//UploadPart1 分段上传
-func UploadPart1(resp *s3.CreateMultipartUploadOutput, partNumber int, fileBody []byte) (*s3.CompletedPart, error) {
+//AloneCreateMultipartUpload 单独启动分段上传
+func AloneCreateMultipartUpload(path string) (*s3.CreateMultipartUploadOutput, error) {
+	svc := s3.New(newSession())
+	input := &s3.CreateMultipartUploadInput{
+		Bucket: aws.String(awsBucketName),
+		Key:    aws.String(path),
+	}
+	result, err := svc.CreateMultipartUpload(input)
+	return result, err
+}
+
+//AloneUploadPart 单独分段上传
+func AloneUploadPart(uploadId, key string, partNumber int64, fileBody []byte) (*s3.CompletedPart, error) {
 	svc := s3.New(newSession())
 	input := &s3.UploadPartInput{
 		Body:          bytes.NewReader(fileBody), // 文件流
-		Bucket:        aws.String(global.GVA_CONFIG.AwsS3.Bucket),
-		Key:           resp.Key,
-		PartNumber:    aws.Int64(int64(partNumber)),
-		UploadId:      resp.UploadId,
+		Bucket:        aws.String(awsBucketName),
+		Key:           aws.String(key),
+		PartNumber:    aws.Int64(partNumber),
+		UploadId:      aws.String(uploadId),
 		ContentLength: aws.Int64(int64(len(fileBody))),
 	}
 	result, err := svc.UploadPart(input)
@@ -117,14 +131,29 @@ func UploadPart1(resp *s3.CreateMultipartUploadOutput, partNumber int, fileBody 
 	}
 	return &s3.CompletedPart{
 		ETag:       result.ETag,
-		PartNumber: aws.Int64(int64(partNumber)),
+		PartNumber: aws.Int64(partNumber),
 	}, nil
+}
+
+//AloneCompleteMultipartUpload 单独完成分段上传
+func AloneCompleteMultipartUpload(key, uploadId string, parts []*s3.CompletedPart) (*s3.CompleteMultipartUploadOutput, error) {
+	svc := s3.New(newSession())
+	input := &s3.CompleteMultipartUploadInput{
+		Bucket: aws.String(awsBucketName),
+		Key:    aws.String(key),
+		MultipartUpload: &s3.CompletedMultipartUpload{
+			Parts: parts,
+		},
+		UploadId: aws.String(uploadId),
+	}
+	result, err := svc.CompleteMultipartUpload(input)
+	return result, err
 }
 
 //CompleteMultipartUpload 完成分段上传
 func CompleteMultipartUpload(svc *s3.S3, resp *s3.CreateMultipartUploadOutput, parts []*s3.CompletedPart) (*s3.CompleteMultipartUploadOutput, error) {
 	input := &s3.CompleteMultipartUploadInput{
-		Bucket: aws.String(global.GVA_CONFIG.AwsS3.Bucket),
+		Bucket: aws.String(awsBucketName),
 		Key:    resp.Key,
 		MultipartUpload: &s3.CompletedMultipartUpload{
 			Parts: parts,
@@ -139,7 +168,7 @@ func ListParts(uploadId, key string) (*s3.ListPartsOutput, error) {
 	svc := s3.New(newSession())
 	input := &s3.ListPartsInput{
 		UploadId: aws.String(uploadId),
-		Bucket:   aws.String(global.GVA_CONFIG.AwsS3.Bucket),
+		Bucket:   aws.String(awsBucketName),
 		Key:      aws.String(key),
 	}
 	result, err := svc.ListParts(input)
@@ -151,7 +180,6 @@ func ListParts(uploadId, key string) (*s3.ListPartsOutput, error) {
 }
 
 func AbortMultipartUpload(svc *s3.S3, resp *s3.CreateMultipartUploadOutput) error {
-	fmt.Println("Aborting multipart upload for UploadId#" + *resp.UploadId)
 	abortInput := &s3.AbortMultipartUploadInput{
 		Bucket:   resp.Bucket,
 		Key:      resp.Key,

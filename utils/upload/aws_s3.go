@@ -32,17 +32,7 @@ func (*AwsS3) UploadFile(file *multipart.FileHeader) (string, string, error) {
 	uploader := s3manager.NewUploader(se)
 	fileKey := fmt.Sprintf("%d%d", time.Now().Unix(), utils.GetRangeNum(4))
 	suffix := path.Ext(file.Filename)
-	images := map[string]int8{
-		".png":  1,
-		".jpg":  2,
-		".gif":  3,
-		".webp": 4,
-	}
-	prefix := global.GVA_CONFIG.AwsS3.PathPrefix
-	if ok := images[suffix]; ok > 0 {
-		prefix = "images" //图片地址
-	}
-	filename := prefix + "/" + suffix
+	filename := fileKey + suffix
 	f, openError := file.Open()
 	if openError != nil {
 		global.GVA_LOG.Error("function file.Open() Filed", zap.Any("err", openError.Error()))
@@ -60,7 +50,7 @@ func (*AwsS3) UploadFile(file *multipart.FileHeader) (string, string, error) {
 		return "", "", err
 	}
 
-	return global.GVA_CONFIG.AwsS3.BaseURL + "/" + filename, fileKey, nil
+	return global.GVA_CONFIG.AwsS3.BaseURL + filename, fileKey, nil
 }
 
 //@author: [WqyJh](https://github.com/WqyJh)

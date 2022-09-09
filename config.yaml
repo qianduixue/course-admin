@@ -21,15 +21,15 @@ autocode:
   web-form: /view
   web-table: /view
 aws-s3:
-  bucket: we-course-source71e471f1-6l77874rzuak
+  bucket: "course-member01"
   region: us-east-1
   endpoint: ""
   s3-force-path-style: false
   disable-ssl: false
   secret-id: "AKIA3WNSABCTKXJMMYM7"
   secret-key: "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"
-  base-url: https://d3nsf2ty2rl01w.cloudfront.net
-  path-prefix: "assets01"
+  base-url: "https://d3oc9ontvrftw4.cloudfront.net/"
+  path-prefix: ""
 captcha:
   key-long: 6
   img-width: 240
